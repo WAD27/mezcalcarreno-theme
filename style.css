@@ -1,0 +1,157 @@
+/*
+Theme Name: WOOW
+Description: Responsive WooCommerce Theme
+Version: 1.1.2
+Theme URI: http://sitesao.com/woow/
+Author: Sitesao
+Author URI: http://sitesao.com/
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: two-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style
+Text Domain: woow
+*/
+
+/*
+Main Stylesheet file is located at assets/css/styles.css
+*/
+
+body {
+  /*font-size: 16px;*/
+}
+
+body p {
+  font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+
+  body p {
+    font-size: 18px;
+  }
+
+  .address, .wpb_wrapper h2 {
+    text-align: center;
+  }
+  .address p {
+    font-size: 14px;
+  }
+
+  .wpb_wrapper h2 {
+    font-size: 24px;
+  }
+
+
+}
+
+@media (max-width: 720px) {
+
+  body p {
+    font-size: 16px;
+  }
+
+  .address p {
+    font-size: 20px !important;
+  }
+
+    .wpb_wrapper h2 {
+      font-size: 32px;
+    }
+}
+
+
+
+
+.header-type-center.header-type-center .primary-nav>li {
+  padding: 0 !important;
+  display: inline-block;
+  float: none;
+}
+
+.button{
+  background: #a99a38;
+  border-color: #a99a38;
+}
+.wpb_row{
+  margin: 0 !important;
+}
+.navbar-brand img{
+  max-height: 130px !important;
+}
+
+.post-grid-wrap ul li .entry-title {
+  text-transform: none !important;
+}
+
+.images{
+  text-align: center;
+}
+
+div.product .summary .product_title {
+  text-transform: none !important;
+}
+
+.single-product .content-container {
+  padding: 25px;
+}
+/*centra imagenes de producto y blog*/
+.wp-post-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.share-icons a {
+  font-size: 1.5em !important;
+}
+
+
+.header-type-center .navbar-fixed-top.navbar-default {
+  height: auto;
+}
+
+#home-hacienda {
+  /*padding: 0 !important;*/
+}
+.home-hacienda {
+  color: whitesmoke;
+}
+/*contacto*/
+
+.wpcf7-form .wpcf7-text {
+  height: 25px !important;
+  padding: 5px !important;
+  font-size: 15px !important;
+}
+
+.wpcf7-submit {
+  height: 50px !important;
+  border: none !important;
+}
+
+.wpcf7-submit:hover {
+  background-color: #153F46 !important;
+}
+
+.wpcf7-submit:focus {
+  background-color: #142E35 !important;
+}
+/**/
+.vc_custom_1468284972440 .vc_column_container {
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+}
+
+.vc_custom_1445829107046 ~ .container {
+  display: none;
+}
+
+.meta-author, .meta-category, .meta-date {
+  display: none !important;
+}
+/*titulos lightbox*/
+.ppt {
+  display: none !important;
+}
+/*fechas de thimbnail*/
+.posts-thumbnail-meta {
+  display: none !important;
+}
