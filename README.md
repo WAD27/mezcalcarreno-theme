@@ -1,2 +1,2 @@
 # mezcalcarreno-theme
-WP childtheme for mezcal Carreño
+WP childtheme for Mezcal Carreño Mx.
