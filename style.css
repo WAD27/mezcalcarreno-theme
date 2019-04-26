@@ -8,7 +8,7 @@ Author URI: codifica.xyz
 Text Domain: mezcalcarreno-theme
 */
 * {
-  outline: 1px solid lime;
+  outline: 1px solid black;
 }
 body {
   /*font-size: 16px;*/
@@ -53,7 +53,10 @@ body p {
     }
 }
 
-
+.col-12 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
 
 
 .header-type-center.header-type-center .primary-nav>li {

@@ -5,7 +5,10 @@
  function mezcal_scripts() {
    $parent_style = 'parent-style';
   wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+	// wp_enqueue_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+	// wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
 	wp_enqueue_style( 'custom-child', get_stylesheet_directory_uri() . '/assets/css/mezcal.css');
+  // wp_enqueue_script('bootstrap-script','https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array( 'jquery' ));
   wp_enqueue_script('img-script',get_stylesheet_directory_uri() . '/assets/js/imgLiquid-min.js', array( 'jquery' ));
   wp_enqueue_script('custom-script',get_stylesheet_directory_uri() . '/assets/js/mezcal.js', array( 'jquery' ));
 }
@@ -49,7 +52,7 @@ function historia_mezcalcarreno() {
     'description'         => __( 'Historias Mezcal Carreno', 'mezcalcarreno-theme' ),
     'labels'              => $labels,
     // 'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-    'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail'),
+    'supports'            => array( 'title', 'excerpt', 'thumbnail'),
     'menu_icon'           => 'dashicons-shield',
     'hierarchical'        => false,
     'public'              => true,
