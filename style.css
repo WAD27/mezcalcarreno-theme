@@ -153,3 +153,42 @@ div.product .summary .product_title {
 .posts-thumbnail-meta {
   display: none !important;
 }
+/*  */
+/* Custom mantenimiento */
+:root {
+  --blanco: #fff;
+  --negro: #000
+}
+#historia_item {
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  height: 250px;
+}
+#historia_item:hover {
+  transition: 0.25s;
+  box-shadow: -2px 2px 5px var(--negro);
+  o-filter: blur(0.5px);
+  moz-filter: blur(0.5px);
+  web-kit-filter: blur(0.5px);
+  filter: blur(0.5px);
+}
+#historia_item_pic {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+#historia_item_txt {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  z-index: 1;
+}
+#historia_item_txt h3 {
+  margin: auto 0;
+  color: var(--blanco);
+  width: 100%;
+  text-shadow: 1px 1px 3px var(--negro)
+}

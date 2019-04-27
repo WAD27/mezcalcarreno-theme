@@ -11,7 +11,13 @@ get_header(); ?>
     <div class="col-12">
 
       <?php
+      $empty = array(
+        'empty_es' => 'No hay historias sobre Mezcal Carreno',
+        'empty_en' => 'No Mezcal Carreño Histories to show'
+    );
+    $empty_txt;
       if (get_locale() == 'es_MX'):
+        $empty_txt = $empty['empty_es'];
         ?>
         <div class="col-12">
           <p>El Mezcal Carreño se inició en 1904 con Don Apolonio Carreño, el Mezcal se hacía de los agaves silvestres que crecían naturalmente en su propiedad, tierra que irónicamente en algunas parcelas, se usaba para cultivar caña de azúcar y se vendía a la familia de los productores de ron más grandes del país.</p>
@@ -23,7 +29,9 @@ get_header(); ?>
           <p>Dicen que tú no encuentras al Mezcal, el Mezcal te encuentra a ti.</p>
 
         </div>
-      <?php elseif (get_locale() == 'en_GB'):?>
+      <?php elseif (get_locale() == 'en_GB'):
+        $empty_txt = $empty['empty_en'];
+        ?>
 
         <div class="col-12">
           <p>INGLES: El Mezcal Carreño se inició en 1904 con Don Apolonio Carreño, el Mezcal se hacía de los agaves silvestres que crecían naturalmente en su propiedad, tierra que irónicamente en algunas parcelas, se usaba para cultivar caña de azúcar y se vendía a la familia de los productores de ron más grandes del país.</p>
@@ -53,14 +61,13 @@ get_header(); ?>
       ?>
 
       <div id="historia_item" class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div id="historia_item_pic" class="">
-          <!-- foto fondo -->
-          <img src="<<?php echo get_the_post_thumbnail_url(); ?>" alt="Historia Mezcal Carreño">
+        <div id="historia_item_pic" class="imgLiquid imgLiquidFill">
+          <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Historia Mezcal Carreño">
         </div>
-        <div class="">
-          <h2 class="col'12">
+        <div id="historia_item_txt">
+          <h3 class="text-center">
             <?php echo get_the_title(); ?>
-          </h2>
+          </h3>
         </div>
       </div>
 
@@ -69,7 +76,7 @@ get_header(); ?>
   else:
     ?>
 
-    <h1 class="col-12">No hay historias sobre Mezcal Carreno</h1>
+    <h1 class="col-12 text-center"><?php echo $empty_txt; ?></h1>
 
   <?php endif; ?>
 
