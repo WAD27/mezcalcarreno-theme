@@ -159,36 +159,58 @@ div.product .summary .product_title {
   --blanco: #fff;
   --negro: #000
 }
-#historia_item {
+.historia_item {
   cursor: pointer;
   padding: 0;
   position: relative;
   height: 250px;
 }
-#historia_item:hover {
+.historia_item:hover {
   transition: 0.25s;
-  box-shadow: -2px 2px 5px var(--negro);
-  o-filter: blur(0.5px);
-  moz-filter: blur(0.5px);
-  web-kit-filter: blur(0.5px);
-  filter: blur(0.5px);
+  /* box-shadow: -2px 2px 5px var(--negro); */
+  o-filter: blur(0.25px);
+  moz-filter: blur(0.25px);
+  web-kit-filter: blur(0.25px);
+  filter: blur(0.25px);
 }
-#historia_item_pic {
+.historia_item_pic {
   position: absolute;
   height: 100%;
   width: 100%;
   z-index: 0;
 }
-#historia_item_txt {
+.historia_item_txt {
   position: absolute;
   height: 100%;
   width: 100%;
   display: flex;
   z-index: 1;
 }
-#historia_item_txt h3 {
+.historia_item_txt h3 {
   margin: auto 0;
   color: var(--blanco);
   width: 100%;
   text-shadow: 1px 1px 3px var(--negro)
+}
+.modal {
+	display: none;
+	vertical-align: middle;
+	position: relative;
+	z-index: 2;
+	max-width: 500px;
+	box-sizing: border-box;
+	width: 90%;
+	background: #fff;
+	padding: 15px 30px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0 0 10px #000;
+	-moz-box-shadow: 0 0 10px #000;
+	-o-box-shadow: 0 0 10px #000;
+	-ms-box-shadow: 0 0 10px #000;
+	box-shadow: 0 0 10px #000;
+	text-align: left;
 }

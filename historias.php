@@ -3,10 +3,37 @@
 Template Name: Historias Mezcal Carreno
 */
 get_header(); ?>
-<div class="content-container">
-  <!-- Tarjetas historias -->
+<!--  -->
+<?php
+$args = array(
+  'post_type' => 'historias'
+);
+$q = new WP_Query($args);
+$cont = 0;
+if ($q->have_posts()):
+  ?>
 
-  <div class="row">
+
+  <?php
+  while ($q->have_posts()): $q->the_post();
+  ?>
+  <!-- modal -->
+  <div id="historia_modal-<?php echo $cont;?>" class="modal">
+    <h2><?php echo get_the_title(); ?></h2>
+    <p><?php echo get_the_content(); ?></p>
+    <a href="#" rel="modal:close"><b>X</b></a>
+  </div>
+  <!-- -->
+  <?php
+  $cont ++;
+endwhile;
+endif;
+?>
+<!--  -->
+<div class="content-container">
+
+  <!-- Tarjetas historias -->
+  <div class="col-12">
 
     <div class="col-12">
 
@@ -14,8 +41,8 @@ get_header(); ?>
       $empty = array(
         'empty_es' => 'No hay historias sobre Mezcal Carreno',
         'empty_en' => 'No Mezcal Carreño Histories to show'
-    );
-    $empty_txt;
+      );
+      $empty_txt;
       if (get_locale() == 'es_MX'):
         $empty_txt = $empty['empty_es'];
         ?>
@@ -51,37 +78,74 @@ get_header(); ?>
   <div class="container">
 
     <?php
-    $args = array(
-      'post_type' => 'historias'
-    );
-    $q = new WP_Query($args);
-
+    // $args = array(
+    //   'post_type' => 'historias'
+    // );
+    // $q = new WP_Query($args);
+    // $cont = 0;
     if ($q->have_posts()):
-      while ($q->have_posts()): $q->the_post();
       ?>
 
-      <div id="historia_item" class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div id="historia_item_pic" class="imgLiquid imgLiquidFill">
-          <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Historia Mezcal Carreño">
-        </div>
-        <div id="historia_item_txt">
-          <h3 class="text-center">
-            <?php echo get_the_title(); ?>
-          </h3>
-        </div>
-      </div>
+      <!-- modal -->
+      <!-- <div id="historia_modal-<?php echo $cont;?>" class="modal-historias">
+      <h2><?php //echo get_the_title(); ?></h2>
+      <p><?php //echo get_the_content(); ?></p>
+      <a href="#" rel="modal:close"><b>X</b></a>
+    </div> -->
+    <!-- -->
 
-      <?php
-    endwhile;
-  else:
+    <?php
+    while ($q->have_posts()): $q->the_post();
+
     ?>
+    <div class="historia_item col-12 col-sm-6 col-md-4 col-lg-3">
 
-    <h1 class="col-12 text-center"><?php echo $empty_txt; ?></h1>
+      <?php echo do_shortcode('[popup_anything id="12180" class="test_class"]'); ?>
 
-  <?php endif; ?>
+      <div id="" class="historia_item_pic imgLiquid imgLiquidFill">
+      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Historia Mezcal Carreño">
+    </div>
+      <div class="historia_item_txt">
+      <h3 class="text-center">
+      <?php echo get_the_title(); ?>
+    </h3>
+    </div>
+
+    </div>
+    <!--
+    <a class="historia_item col-12 col-sm-6 col-md-4 col-lg-3" rel="modal:open" href="#historia_modal-<?php echo $cont;?>">
+    <div id="" class="historia_item_pic imgLiquid imgLiquidFill">
+    <img src="<?php ///echo get_the_post_thumbnail_url(); ?>" alt="Historia Mezcal Carreño">
+  </div>
+  <div class="historia_item_txt">
+  <h3 class="text-center">
+  <?php //echo get_the_title(); ?>
+  <?php //echo do_shortcode('[popup_anything id="12180"]'); ?>
+</h3>
+</div>
+</a>
+-->
+<?php
+$cont ++;
+endwhile;
+else:
+  ?>
+
+  <h1 class="col-12 text-center"><?php echo $empty_txt; ?></h1>
+
+<?php endif; ?>
 
 </div>
 <!--  -->
+<!--  -->
+<script>
+jQuery(document).ready(()=>{
 
+  jQuery(".modal-historias").each(()=>{
+    console.log(jQuery(this).id);
+  })
+
+})
+</script>
 </div>
 <?php get_footer(); ?>

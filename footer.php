@@ -16,7 +16,7 @@
 				</div>
 			</div>
 		<?php endif;?>
-		
+
 		<?php if(dh_get_theme_option('footer-newsletter',1)):?>
 			<div class="footer-newsletter">
 				<div class="<?php dh_container_class() ?>">
@@ -51,7 +51,7 @@
 				<div class="<?php dh_container_class() ?>">
 					<div class="footer-widget-wrap">
 						<div class="row">
-							<?php 
+							<?php
 							$area_columns = dh_get_theme_option('footer-area-columns',4);
 							if($area_columns == '5'):
 								?>
@@ -106,10 +106,11 @@
 		<?php endif;?>
 
 		<?php if($footer_info = dh_get_theme_option('footer-info')):?>
-			<div class="footer-copyright text-center"><?php echo ($footer_info) ?></div>
+			<!-- <div class="footer-copyright text-center"><?php echo ($footer_info) ?></div> -->
+			<div class="footer-copyright text-center"><?php echo date('Y') ?> Mezcal Carreño Oaxaca México</div>
     	<?php endif;?>
 	</footer>
-	
+
 </div>
 <?php wp_footer(); ?>
 </body>
