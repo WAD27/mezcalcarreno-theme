@@ -78,53 +78,26 @@ endif;
   <div class="container">
 
     <?php
-    // $args = array(
-    //   'post_type' => 'historias'
-    // );
-    // $q = new WP_Query($args);
-    // $cont = 0;
     if ($q->have_posts()):
+
+      while ($q->have_posts()): $q->the_post();
+
       ?>
+      <div class="historia_item col-12 col-sm-6 col-md-4 col-lg-3">
 
-      <!-- modal -->
-      <!-- <div id="historia_modal-<?php echo $cont;?>" class="modal-historias">
-      <h2><?php //echo get_the_title(); ?></h2>
-      <p><?php //echo get_the_content(); ?></p>
-      <a href="#" rel="modal:close"><b>X</b></a>
-    </div> -->
-    <!-- -->
+        <?php echo ///do_shortcode('[popup_anything id="12180" class="test_class"]'); ?>
+        <div class="historia_item_txt">
+          <h3 class="text-center">
+            <?php echo get_the_title(); ?>
+          </h3>
+        </div>
+        <div id="" class="historia_item_pic imgLiquid imgLiquidFill">
+          <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Historia Mezcal Carreño">
+        </div>
 
-    <?php
-    while ($q->have_posts()): $q->the_post();
 
-    ?>
-    <div class="historia_item col-12 col-sm-6 col-md-4 col-lg-3">
+      </div>
 
-      <?php echo do_shortcode('[popup_anything id="12180" class="test_class"]'); ?>
-
-      <div id="" class="historia_item_pic imgLiquid imgLiquidFill">
-      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Historia Mezcal Carreño">
-    </div>
-      <div class="historia_item_txt">
-      <h3 class="text-center">
-      <?php echo get_the_title(); ?>
-    </h3>
-    </div>
-
-    </div>
-    <!--
-    <a class="historia_item col-12 col-sm-6 col-md-4 col-lg-3" rel="modal:open" href="#historia_modal-<?php echo $cont;?>">
-    <div id="" class="historia_item_pic imgLiquid imgLiquidFill">
-    <img src="<?php ///echo get_the_post_thumbnail_url(); ?>" alt="Historia Mezcal Carreño">
-  </div>
-  <div class="historia_item_txt">
-  <h3 class="text-center">
-  <?php //echo get_the_title(); ?>
-  <?php //echo do_shortcode('[popup_anything id="12180"]'); ?>
-</h3>
-</div>
-</a>
--->
 <?php
 $cont ++;
 endwhile;
