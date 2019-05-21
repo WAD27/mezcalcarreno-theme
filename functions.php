@@ -5,11 +5,9 @@
  function mezcal_scripts() {
    $parent_style = 'parent-style';
   wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css');
-  // wp_enqueue_style( 'jquery-3','https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js');
   wp_enqueue_style( 'modal-styles', get_stylesheet_directory_uri() . '/assets/css/jquery.modal.css');
 	wp_enqueue_style( 'custom-child', get_stylesheet_directory_uri() . '/assets/css/mezcal.css');
   wp_enqueue_script( 'img-script', get_stylesheet_directory_uri() . '/assets/js/imgLiquid.js', array( 'jquery' ));
-  wp_enqueue_script( 'modal-script', get_stylesheet_directory_uri() . '/assets/js/jquery.modal.js', array( 'jquery' ));
   wp_enqueue_script( 'custom-script',get_stylesheet_directory_uri() . '/assets/js/mezcal.js', array( 'jquery' ));
 }
 add_action( 'wp_enqueue_scripts', 'mezcal_scripts' );

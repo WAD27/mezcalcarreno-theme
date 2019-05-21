@@ -1,7 +1,144 @@
+/* Custom mantenimiento */
+@font-face {
+  font-family: 'Univers LT Std';
+  src: url('../fonts/UniversLTStd-Light.woff') format('woff'),
+  url('../fonts/UniversLTStd-Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Univers LT Std light';
+  src: url('../fonts/Univers.LT.Std.47.Light.Condensed.woff') format('woff'),
+  url('../fonts/Univers.LT.Std.47.Light.Condensed.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Plathorn Conboo';
+  src: url('../fonts/plathorn-conboo-webfont.woff2') format('woff2'),
+  url('../fonts/plathorn-conboo-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --blanco: #fff;
+  --negro: #000;
+  --color-acento: #B79157;
+  --fuente-textos-condensed: 'Univers LT Std';
+  --fuente-textos: 'Univers LT Std light';
+  --fuente-titulos: 'Plathorn Conboo';
+}
+/*  */
+body, p, div {
+  font-family: var(--fuente-textos-condensed) !important;
+  font-size: 17px !important;
+  letter-spacing: 0.3px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fuente-titulos) !important;
+  color: var(--color-acento) !important;
+  margin-bottom: 32px;
+}
+a {
+ font-family: var(--fuente-titulos) !important;
+}
+a:hover {
+    color: var(--color-acento) !important;
+  }
+.historia_item {
+  cursor: pointer;
+  padding: 0 !important;
+  position: relative;
+  height: 250px;
+  padding: 16px !important;
+  border-radius: 3px;
+}
+.historia_item:hover {
+  transition: 0.25s;
+  /* box-shadow: -2px 2px 5px var(--negro); */
+  o-filter: grayscale(91%);
+  moz-filter: grayscale(91%);
+  web-kit-filter: grayscale(91%);
+  filter: grayscale(91%);
+}
+.historia_item_pic {
+border-radius: 3px;
+ height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+.historia_item_txt {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  z-index: 3;
+}
+.historia_item_wrap {
+  height: 100%;
+  position: absolute !important;
+  width: 100%;
+}
+.historia_item_txt h4 {
+  margin: auto 0 64px;
+  color: var(--blanco);
+  width: auto;
+  font-weight: 100;
+  padding: 8px;
+  background-color: rgba(0,0,0,0.5);
+  border-top-right-radius: 18px;
+}
+.navbar-header-right, .add_to_cart_button, .cart, .price, .onsale,
+.cart-icon-mobile, .navbar-search-button, .offcanvas-user  {
+  display:none !important;
+}
+#menu-mezcalcarreno_english {
+  padding-top: 32px;
+}
+.page-breadcrumb {
+  font-size: 11px !important;
+}
+.breadcrumb span {
+  font-family: var(--fuente-textos) !important;
+}
+.content-container {
+  padding-top: 16px !important;
+}
+/*  modal */
 .paoc-popup.popupaoc-link {
   position: absolute;
   height: 100%;
   width: 100%;
   z-index: 20;
   color: white;
+}
+.paoc-popup-modal-cnt {
+  background-color: #FFF;
+  padding: 0px 20px 20px 20px;
+  border-radius: 5px;
+}
+.paoc-popup-modal, .paoc-popup-modal p:last-child {
+  border-radius: 5px;
+}
+.menu-item a {
+  text-transform: capitalize !important;
+  font-weight: lighter !important;
+  padding: .6rem 1.7rem !important;
+  font-size: 1.3rem;
+}
+.current_page_item a {
+  color: var(--color-acento) !important;
+}
+.current_page_item a:hover {
+  color: var(--color-negro) !important;
+}
+.wpb_wrapper h2 {
+  text-align: left !important;
+}
+/*  */
+.no-padding {
+  padding: 0;
+}
+.abs {
+  position: absolute !important;
 }
